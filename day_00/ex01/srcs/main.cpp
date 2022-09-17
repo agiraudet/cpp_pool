@@ -6,32 +6,31 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 15:03:23 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/17 17:44:50 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/17 18:51:57 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "PhoneBook.hpp"
 
+void	fillBookAuto(PhoneBook *pageBlanches)
+{
+	pageBlanches->addContactAuto("0123456789abcdef", "Smith", "hexa", "0681193571", "pas malin");
+	pageBlanches->addContactAuto("aaa", "aaa", "a", "aaaaaa", "aaaaaaaaa");
+	pageBlanches->addContactAuto("b", "bbbbbbbbbbbbb", "bb", "bbb", "bbbbb");
+	pageBlanches->addContactAuto("x", "xx", "xxx", "xxxx", "xxxxx");
+	pageBlanches->addContactAuto("y", "yy", "yyy", "yyyy", "yyyyy");
+	pageBlanches->addContactAuto("z", "zz", "zzz", "zzzz", "zzzzz");
+	pageBlanches->addContactAuto("w", "ww", "www", "wwww", "wwwww");
+	pageBlanches->addContactAuto("v", "vv", "vvv", "vvvv", "vvvvv");
+}
 
 int	main()
 {
 	PhoneBook	pageBlanches;
 	std::string	input;
 
-	pageBlanches.addContactAuto("0123456789abcdef", "Smith", "hexa", "0681193571", "pas malin");
-	pageBlanches.addContactAuto("aaa", "aaa", "a", "aaaaaa", "aaaaaaaaa");
-	pageBlanches.addContactAuto("b", "bbbbbbbbbbbbb", "bb", "bbb", "bbbbb");
-	/*
-	pageBlanches.addContactAuto("x", "xx", "xxx", "xxxx", "xxxxx");
-	pageBlanches.addContactAuto("y", "yy", "yyy", "yyyy", "yyyyy");
-	pageBlanches.addContactAuto("z", "zz", "zzz", "zzzz", "zzzzz");
-	pageBlanches.addContactAuto("w", "ww", "www", "wwww", "wwwww");
-	pageBlanches.addContactAuto("v", "vv", "vvv", "vvvv", "vvvvv");
-	pageBlanches.search();
-	pageBlanches.addContact();
-	pageBlanches.search();
-	*/
+	//fillBookAuto(&pageBlanches);
 
 	while (true)
 	{
@@ -46,6 +45,7 @@ int	main()
 			pageBlanches.search();
 			while (true && pageBlanches.getNbContact() > 0)
 			{
+				std::cout << "index> ";
 				std::getline(std::cin >> std::ws, input);
 				if (isdigit(input[0]) && !input[1] && input[0] - '0' < pageBlanches.getNbContact())
 				{
@@ -56,8 +56,6 @@ int	main()
 					std::cout << "Please choose a valid index" << std::endl;
 			}
 		}
-		else
-			std::cout << "Wrong input, try again." << std::endl;
 	}
 	return (0);
 }
