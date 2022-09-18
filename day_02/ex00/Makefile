@@ -6,30 +6,42 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/09/18 16:06:13 by agiraude         ###   ########.fr        #
+#    Updated: 2022/09/18 13:37:12 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	almostSed
+NAME		:=	fixedPointNumbers
 
-SRCS		:=	main.cpp
+BUILD_DIR	:=	./build
 
-OBJS		:=	$(SRCS:%.cpp=%.o)
+SRCS_DIR	:=	./srcs
 
-CFLAGS		:=	-Wall -Wextra -Werror -std=c++98
+SRCS		:=	main.cpp \
+				Fixed.cpp
 
-CC			:= c++
+OBJS		:=	$(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+INC_DIRS	:=	./includes 
 
-%.o: %.cpp
+INC_FLAGS	:=	$(addprefix -I, $(INC_DIRS))
+
+CFLAGS		:=	$(INC_FLAGS) -Wall -Wextra -Werror -std=c++98
+
+CC			:=	c++
+
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) $(OBJS) $(DEPS) -o $@
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+$(BUILD_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -rf $(BUILD_DIR)
 
 fclean: clean
 	rm -f $(NAME)

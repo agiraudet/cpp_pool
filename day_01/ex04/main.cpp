@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 09:17:03 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/18 10:10:15 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/18 16:05:37 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,29 @@ std::string	strrplc(std::string str, std::string from, std::string to)
 	return (str);
 }
 
+int	check_args(int argc, char *argv[])
+{
+	if (argc != 4)
+	{
+		std::cout << "Wrong number of arguments" << std::endl;
+		return 0;
+	}
+	if (argv[2][0] == 0)
+	{
+		std::cout << "argument 2 should not be empty" << std::endl;
+		return 0;
+	}
+	return 1;
+}
+
 int	main(int argc, char *argv[])
 {
 	std::ifstream	ifs;
 	std::ofstream	ofs;
 	std::string		outfile;
 
-	if (argc != 4)
-	{
-		std::cout << "Wrong number of arguments" << std::endl;
+	if (!check_args(argc, argv))
 		return 0;
-	}
 	ifs.open(argv[1]);
 	if (!ifs.is_open())
 	{
