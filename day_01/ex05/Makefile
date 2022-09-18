@@ -6,30 +6,42 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/09/18 08:59:44 by agiraude         ###   ########.fr        #
+#    Updated: 2022/09/18 10:57:32 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	megaphone
+NAME		:=	almostHarl
 
-SRCS		:=	megaphone.cpp
+BUILD_DIR	:=	./build
 
-OBJS		:=	$(SRCS:%.cpp=%.o)
+SRCS_DIR	:=	./srcs
 
-CFLAGS		:=	-Wall -Wextra -Werror -std=c++98
+SRCS		:=	main.cpp \
+				Harl.cpp
+
+OBJS		:=	$(SRCS:%.cpp=$(BUILD_DIR)/%.o)
+
+INC_DIRS	:=	./includes 
+
+INC_FLAGS	:=	$(addprefix -I, $(INC_DIRS))
+
+CFLAGS		:=	$(INC_FLAGS) -Wall -Wextra -Werror -std=c++98
 
 CC			:= c++
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) $(OBJS) $(DEPS) -o $@
 
-%.o: %.cpp
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+$(BUILD_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -rf $(BUILD_DIR)
 
 fclean: clean
 	rm -f $(NAME)
