@@ -6,18 +6,18 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/09/19 14:09:44 by agiraude         ###   ########.fr        #
+#    Updated: 2022/09/19 16:33:45 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	fixedPointNumbers
+NAME		:=	clapTrap
 
 BUILD_DIR	:=	./build
 
 SRCS_DIR	:=	./srcs
 
 SRCS		:=	main.cpp \
-				Fixed.cpp
+				ClapTrap.cpp
 
 OBJS		:=	$(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 
@@ -25,7 +25,7 @@ INC_DIRS	:=	./includes
 
 INC_FLAGS	:=	$(addprefix -I, $(INC_DIRS))
 
-CFLAGS		:=	$(INC_FLAGS) -Wall -Wextra -Werror -std=c++98 -g
+CFLAGS		:=	$(INC_FLAGS) -Wall -Wextra -Werror -std=c++98
 
 CC			:=	c++
 
