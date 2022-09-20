@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:57:44 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/19 14:48:37 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/20 12:54:23 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ Fixed	Fixed::operator*(Fixed const & rhs) const
 {
 	Fixed	x;
 
-	x.setRawBits((this->_n * rhs.getRawBits()) >> this->_fNbBits);
+	x.setRawBits((long(this->_n) * long(rhs.getRawBits())) >> this->_fNbBits);
 	return x;
 }
 
@@ -104,7 +104,7 @@ Fixed	Fixed::operator/(Fixed const & rhs) const
 {
 	Fixed	x;
 
-	x.setRawBits((this->_n << this->_fNbBits) / rhs.getRawBits());
+	x.setRawBits((long(this->_n) << this->_fNbBits) / rhs.getRawBits());
 	return x;
 }
 

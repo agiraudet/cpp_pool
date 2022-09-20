@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:43:02 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/19 15:01:29 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/20 12:55:00 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,35 @@ int main( void )
 		std::cout << "max(x, z) is " << Fixed::max(x, z) << std::endl << std::endl;
 	}
 	{
-	Fixed	a(5.6f);
-	Fixed	b(2.7f);
+		Fixed	a(5.6f);
+		Fixed	b(2.7f);
 
-	std::cout << "calcul and compare:" << std::endl;
-	std::cout << "a as float is " << a << std::endl;
-	std::cout << "b as float is " << b << std::endl << std::endl;
-	std::cout << "a + b is " << a + b << std::endl;
-	std::cout << "a - b is " << a - b << std::endl;
-	std::cout << "a * b is " << a * b << std::endl;
-	std::cout << "a / b is " << a / b << std::endl;
-	std::cout << "a > b is " << (a > b) << std::endl;
-	std::cout << "a >= b is " << (a >= b) << std::endl;
-	std::cout << "a >= a is " << (a >= a) << std::endl;
-	std::cout << "a < b is " << (a < b) << std::endl;
-	std::cout << "b <= b is " << (b <= b) << std::endl;
-	std::cout << "b == b is " << (b == b) << std::endl;
-	std::cout << "b != b is " << (b != b) << std::endl;
-	std::cout << "a == b is " << (a == b) << std::endl;
-	std::cout << "a != b is " << (a != b) << std::endl;
+		std::cout << "calcul and compare:" << std::endl;
+		std::cout << "a as float is " << a << std::endl;
+		std::cout << "b as float is " << b << std::endl << std::endl;
+		std::cout << "a + b is " << a + b << std::endl;
+		std::cout << "a - b is " << a - b << std::endl;
+		std::cout << "a * b is " << a * b << std::endl;
+		std::cout << "a / b is " << a / b << std::endl;
+		std::cout << "a > b is " << (a > b) << std::endl;
+		std::cout << "a >= b is " << (a >= b) << std::endl;
+		std::cout << "a >= a is " << (a >= a) << std::endl;
+		std::cout << "a < b is " << (a < b) << std::endl;
+		std::cout << "b <= b is " << (b <= b) << std::endl;
+		std::cout << "b == b is " << (b == b) << std::endl;
+		std::cout << "b != b is " << (b != b) << std::endl;
+		std::cout << "a == b is " << (a == b) << std::endl;
+		std::cout << "a != b is " << (a != b) << std::endl << std::endl;
+	}
+	{
+		Fixed a(19519.1f);
+		Fixed b(8.19922f);
+
+		std::cout << "check overflow:" << std::endl;
+		std::cout << "a as float is " << a << std::endl;
+		std::cout << "b as float is " << b << std::endl;
+		std::cout << "a * b is " << a * b << std::endl;
+		std::cout << "(should be : " << float(19519.1f * 8.19922f) << " )" << std::endl << std::endl;
 	}
 	{
 		Fixed a;
