@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:16:59 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/20 13:32:00 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 15:39:14 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
+# include <iostream>
+# include <string>
 
 class	ScavTrap : public ClapTrap
 {
@@ -28,8 +30,5 @@ class	ScavTrap : public ClapTrap
 		void	guardGate(void) const;
 		void	attack(const std::string & target);
 };
-
-std::ostream &	operator<<(std::ostream & o, ScavTrap & rhs);
-
 
 #endif

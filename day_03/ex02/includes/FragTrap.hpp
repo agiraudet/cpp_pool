@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:16:59 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/20 14:50:39 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 15:39:15 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
+# include <iostream>
+# include <string>
 
 class	FragTrap : public ClapTrap
 {
@@ -28,8 +30,5 @@ class	FragTrap : public ClapTrap
 		void	highFivesGuys(void) const;
 		void	attack(const std::string & target);
 };
-
-std::ostream &	operator<<(std::ostream & o, FragTrap & rhs);
-
 
 #endif
