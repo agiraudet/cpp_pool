@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:17:45 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 17:21:05 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:58:30 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class	Bureaucrat
 		unsigned int	getGrade(void) const;
 		void			incGrade(void);
 		void			decGrade(void);
-		void			signForm(Form const & form) const;
+		void			signForm(Form & form) const;
 
 		class	GradeTooHighException : public std::exception
 		{

@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:19:43 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 17:20:14 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:04:36 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,13 @@ void	Bureaucrat::decGrade(void)
 		this->_grade++;
 }
 
-void	Bureaucrat::signForm(Form const & form) const
+void	Bureaucrat::signForm(Form & form) const
 {
 	std::cout << this->_name;
 	if (form.getSigned())
 		std::cout << " couldn't sign " << form.getName()
 			<< " because it's already signed" << std::endl;
-	else if (form.getGradeToExecute() < this->_grade)
+	else if (form.getGradeToExecute() > this->_grade)
 		std::cout << " couldn't sign " << form.getName()
 			<< " because it requires a better grade" << std::endl;
 	else

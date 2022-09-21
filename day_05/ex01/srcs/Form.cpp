@@ -6,11 +6,12 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:14 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 17:07:24 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:01:55 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(std::string name, unsigned int gToSign, unsigned int gToExecute)
 : _name(name), _signed(false), _gradeToSign(gToSign), _gradeToExecute(gToExecute)

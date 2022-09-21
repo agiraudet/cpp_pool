@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:47:25 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 17:21:51 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:02:11 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include <iostream>
 # include <string>
-# include "Bureaucrat.hpp"
+
+class	Bureaucrat;
 
 class	Form
 {
