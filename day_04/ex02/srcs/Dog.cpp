@@ -1,50 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:40:41 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 09:36:37 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:37:16 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "Dog.hpp"
 
-WrongAnimal::WrongAnimal(void)
+Dog::Dog(void)
 {
-	std::cout << "An WrongAnimal has been created" << std::endl;
+	std::cout << "An Dog has been created" << std::endl;
+	this->setType("Dog");
+	this->_brain = new Brain;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const & src)
+Dog::Dog(Dog const & src)
 {
+	std::cout << "An Dog has been created by copy" << std::endl;
+	this->_brain = new Brain;
 	*this = src;
-	std::cout << "An WrongAnimal has been created by copy" << std::endl;
 }
 
-WrongAnimal::~WrongAnimal(void)
+Dog::~Dog(void)
 {
-	std::cout << "An WrongAnimal has been destroyed" << std::endl;
+	delete this->_brain;
+	std::cout << "An Dog has been destroyed" << std::endl;
 }
 
-WrongAnimal & WrongAnimal::operator=(WrongAnimal const & rhs)
+Dog & Dog::operator=(Dog const & rhs)
 {
 	this->_type = rhs._type;
+	*(this->_brain) = *(rhs._brain);
 	return *this;
 }
 
-void	WrongAnimal::setType(std::string type)
+void	Dog::makeSound(void) const
 {
-	this->_type = type;
+	std::cout << "*OUAF OUAF*" << std::endl;
 }
 
-std::string	WrongAnimal::getType(void) const
+std::string	Dog::getIdea(int n) const
 {
-	return this->_type;
+	return this->_brain->getIdea(n);
 }
 
-void	WrongAnimal::makeSound(void) const
+void	Dog::setIdea(int n, std::string idea)
 {
-	std::cout << "*Undefined, somehow wrong, noise*" << std::endl;
+	this->_brain->setIdea(n, idea);
 }

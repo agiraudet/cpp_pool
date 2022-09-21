@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:05:42 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 09:43:02 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:48:28 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include <iostream>
-# include "WrongAnimal.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-class	WrongCat : public WrongAnimal
+class	Cat : public AAnimal
 {
 	public:
 
-		WrongCat(void);
-		WrongCat(WrongCat const & src);
-		virtual	~WrongCat(void);
+		Cat(void);
+		Cat(Cat const & src);
+		virtual	~Cat(void);
 		
-		WrongCat & operator=(WrongCat const & rhs);
+		Cat & operator=(Cat const & rhs);
 
 		virtual void	makeSound(void) const;
+		std::string		getIdea(int n) const;
+		void			setIdea(int n, std::string idea);
+
+	private:
+		Brain *	_brain;
 };
 
 #endif

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:05:42 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 13:48:02 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:48:38 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include <iostream>
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class	Cat : public Animal
+class	Dog : public AAnimal
 {
 	public:
 
-		Cat(void);
-		Cat(Cat const & src);
-		virtual	~Cat(void);
+		Dog(void);
+		Dog(Dog const & src);
+		virtual	~Dog(void);
 		
-		Cat & operator=(Cat const & rhs);
+		Dog & operator=(Dog const & rhs);
 
 		virtual void	makeSound(void) const;
 		std::string		getIdea(int n) const;
