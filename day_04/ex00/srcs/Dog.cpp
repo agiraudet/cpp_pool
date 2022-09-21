@@ -1,50 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:40:41 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 09:29:09 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/21 09:27:37 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
-Animal::Animal(void)
+Dog::Dog(void)
 {
-	std::cout << "An animal has been created" << std::endl;
+	std::cout << "An Dog has been created" << std::endl;
+	this->setType("Dog");
 }
 
-Animal::Animal(Animal const & src)
+Dog::Dog(Dog const & src)
 {
 	*this = src;
-	std::cout << "An animal has been created by copy" << std::endl;
+	std::cout << "An Dog has been created by copy" << std::endl;
 }
 
-Animal::~Animal(void)
+Dog::~Dog(void)
 {
-	std::cout << "An animal has been destroyed" << std::endl;
+	std::cout << "An Dog has been destroyed" << std::endl;
 }
 
-Animal & Animal::operator=(Animal const & rhs)
+Dog & Dog::operator=(Dog const & rhs)
 {
 	this->_type = rhs._type;
 	return *this;
 }
 
-void	Animal::setType(std::string type)
+void	Dog::makeSound(void) const
 {
-	this->_type = type;
-}
-
-std::string	Animal::getType(void) const
-{
-	return this->_type;
-}
-
-void	Animal::makeSound(void) const
-{
-	std::cout << "*Undefined noise*" << std::endl;
+	std::cout << "*OUAF OUAF*" << std::endl;
 }
