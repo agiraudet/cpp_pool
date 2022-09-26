@@ -6,18 +6,18 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/09/26 16:24:27 by agiraude         ###   ########.fr        #
+#    Updated: 2022/09/26 16:29:50 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	convert
+NAME		:=	typeGuess
 
 BUILD_DIR	:=	./build
 
 SRCS_DIR	:=	./srcs
 
 SRCS		:=	main.cpp \
-				Convert.cpp
+				Base.cpp
 
 OBJS		:=	$(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 

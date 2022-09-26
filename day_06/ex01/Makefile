@@ -6,42 +6,30 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/09/26 16:24:27 by agiraude         ###   ########.fr        #
+#    Updated: 2022/09/26 16:07:28 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	convert
+NAME		:=	cerealize
 
-BUILD_DIR	:=	./build
+SRCS		:=	main.cpp
 
-SRCS_DIR	:=	./srcs
+OBJS		:=	$(SRCS:%.cpp=%.o)
 
-SRCS		:=	main.cpp \
-				Convert.cpp
+CFLAGS		:=	-Wall -Wextra -Werror -std=c++98
 
-OBJS		:=	$(SRCS:%.cpp=$(BUILD_DIR)/%.o)
+CC			:= c++
 
-INC_DIRS	:=	./includes 
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $@
 
-INC_FLAGS	:=	$(addprefix -I, $(INC_DIRS))
-
-CFLAGS		:=	$(INC_FLAGS) -Wall -Wextra -Werror -std=c++98
-
-CC			:=	c++
-
-$(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJS) $(DEPS) -o $@
-
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
-
-$(BUILD_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(BUILD_DIR)
+%.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
