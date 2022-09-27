@@ -6,12 +6,18 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:19:43 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 13:05:05 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:03:58 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+
+Bureaucrat::Bureaucrat(void)
+: _name("noname"), _grade(150)
+{
+	return ;
+}
 
 Bureaucrat::Bureaucrat(std::string name, unsigned int grade)
 : _name(name), _grade(grade)
@@ -20,20 +26,15 @@ Bureaucrat::Bureaucrat(std::string name, unsigned int grade)
 		throw Bureaucrat::GradeTooHighException();
 	if (this->_grade > 150)
 			throw Bureaucrat::GradeTooLowException();
-	std::cout << "Constructed Bureaucrat \"" << name << "\" (grade ";
-	std::cout << grade << ")" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & src)
 {
 	*this = src;
-	std::cout << "Constructed Bureaucrat \"" << this->_name << "\" (grade ";
-	std::cout << this->_grade << ") by copy." << std::endl;
 }
 
 Bureaucrat::~Bureaucrat(void)
 {
-	std::cout << "Destroyed " << this->_name << std::endl;
 }
 
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const & rhs)
@@ -69,7 +70,7 @@ void	Bureaucrat::decGrade(void)
 		this->_grade++;
 }
 
-void	Bureaucrat::signAForm(AForm & form) const
+void	Bureaucrat::signForm(AForm & form) const
 {
 	std::cout << this->_name;
 	try

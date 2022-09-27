@@ -6,7 +6,7 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:46:50 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 12:38:17 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:21:35 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class	PresidentialPardonForm : public AForm
 {
 	public:
 
+		PresidentialPardonForm(void);
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(PresidentialPardonForm const & src);
 		~PresidentialPardonForm(void);

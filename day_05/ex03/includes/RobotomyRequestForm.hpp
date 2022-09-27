@@ -6,7 +6,7 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:46:50 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 12:36:36 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:21:49 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class	RobotomyRequestForm : public AForm
 {
 	public:
 
+		RobotomyRequestForm(void);
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(RobotomyRequestForm const & src);
 		~RobotomyRequestForm(void);

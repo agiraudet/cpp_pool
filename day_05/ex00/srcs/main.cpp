@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:46:02 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 15:02:12 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:08:42 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,14 @@ int	main()
 		{
 			Bureaucrat	a("Tom", 1);
 			std::cout << a << std::endl;
-			a.incGrade();
+			try
+			{
+				a.incGrade();
+			}
+			catch (std::exception & e)
+			{
+				std::cout << "error: " << e.what() << std::endl;
+			}
 			std::cout << a << std::endl;
 		}
 		catch (std::exception & e)
@@ -78,7 +85,14 @@ int	main()
 		{
 			Bureaucrat	a("Tom", 150);
 			std::cout << a << std::endl;
-			a.decGrade();
+			try
+			{
+				a.decGrade();
+			}
+			catch (std::exception & e)
+			{
+				std::cout << "error: " << e.what() << std::endl;
+			}
 			std::cout << a << std::endl;
 		}
 		catch (std::exception & e)

@@ -6,11 +6,17 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:19:43 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 15:03:26 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:04:01 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat(void)
+: _name("noname"), _grade(150)
+{
+	return ;
+}
 
 Bureaucrat::Bureaucrat(std::string name, unsigned int grade)
 : _name(name), _grade(grade)

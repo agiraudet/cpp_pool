@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:47:25 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 11:57:03 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:55:44 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class	AForm
 {
 	public:
 
+		AForm(void);
 		AForm(std::string name, unsigned int gToSign, unsigned int gToExecute);
 		AForm(AForm const & src);
-		~AForm(void);
+		virtual ~AForm(void);
 		AForm & operator=(AForm const & rhs);
 
 		virtual void	act(void) const = 0;
@@ -52,6 +53,15 @@ class	AForm
 				virtual const char * what() const throw()
 				{
 					return ("Grade too low");
+				}
+		};
+
+		class	NotSignedException : public std::exception
+		{
+			public :
+				virtual const char * what() const throw()
+				{
+					return ("Form not signed");
 				}
 		};
 

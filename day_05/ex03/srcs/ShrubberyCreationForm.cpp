@@ -6,7 +6,7 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:48:38 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 12:29:07 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:37:52 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,27 @@
 #include <iostream>
 #include <fstream>
 
+ShrubberyCreationForm::ShrubberyCreationForm(void)
+: AForm("ShrubberyCreationForm", 145, 137)
+{
+	this->_target = "notarget";
+}
+
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 : AForm("ShrubberyCreationForm", 145, 137)
 {
 	this->_target = target;
-	std::cout << "An ShrubberyCreationForm has been created" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & src)
 : AForm("ShrubberyCreationForm", 145, 137)
 {
 	*this = src;
-	std::cout << "An ShrubberyCreationForm has been created by copy" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
-	std::cout << "An ShrubberyCreationForm has been destroyed" << std::endl;
+	return ;
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)

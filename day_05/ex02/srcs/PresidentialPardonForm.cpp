@@ -6,29 +6,33 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:48:38 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 12:40:15 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:37:25 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
+PresidentialPardonForm::PresidentialPardonForm(void)
+: AForm("PresidentialPardonForm", 25, 5)
+{
+	this->_target = "notarget";
+}
+
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
 : AForm("PresidentialPardonForm", 25, 5)
 {
 	this->_target = target;
-	std::cout << "An PresidentialPardonForm has been created" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src)
 : AForm("PresidentialPardonForm", 25, 5)
 {
 	*this = src;
-	std::cout << "An PresidentialPardonForm has been created by copy" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(void)
 {
-	std::cout << "An PresidentialPardonForm has been destroyed" << std::endl;
+	return ;
 }
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)

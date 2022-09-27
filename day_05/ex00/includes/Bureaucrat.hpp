@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:17:45 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 14:38:46 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:00:24 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class	Bureaucrat
 {
 	public:
 
+		Bureaucrat(void);
 		Bureaucrat(std::string name, unsigned int grade);
 		Bureaucrat(Bureaucrat const & src);
 		~Bureaucrat(void);

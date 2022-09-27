@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:47:25 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 18:02:11 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:17:06 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class	Form
 {
 	public:
 
+		Form(void);
 		Form(std::string name, unsigned int gToSign, unsigned int gToExecute);
 		Form(Form const & src);
 		~Form(void);

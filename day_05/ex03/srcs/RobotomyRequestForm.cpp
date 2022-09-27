@@ -6,29 +6,33 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:48:38 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/22 13:05:51 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:37:40 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
+RobotomyRequestForm::RobotomyRequestForm(void)
+: AForm("RobotomyRequestForm", 72, 45)
+{
+	this->_target = "notarget";
+}
+
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
 : AForm("RobotomyRequestForm", 72, 45)
 {
 	this->_target = target;
-	std::cout << "An RobotomyRequestForm has been created" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src)
 : AForm("RobotomyRequestForm", 72, 45)
 {
 	*this = src;
-	std::cout << "An RobotomyRequestForm has been created by copy" << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(void)
 {
-	std::cout << "An RobotomyRequestForm has been destroyed" << std::endl;
+	return ;
 }
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const & rhs)

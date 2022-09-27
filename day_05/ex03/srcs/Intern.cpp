@@ -6,7 +6,7 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 13:25:32 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/23 14:30:31 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:53:53 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,16 @@ Intern::Intern(void)
 	this->_f[0] = &Intern::_SCForm;
 	this->_f[1] = &Intern::_PPForm;
 	this->_f[2] = &Intern::_RRForm;
-	std::cout << "An Intern has been created" << std::endl;
 }
 
 Intern::Intern(Intern const & src)
 {
 	*this = src;
-	std::cout << "An Intern has been created by copy" << std::endl;
 }
 
 Intern::~Intern(void)
 {
-	std::cout << "An Intern has been destroyed" << std::endl;
+	return ;
 }
 
 Intern & Intern::operator=(Intern const & rhs)
@@ -75,5 +73,3 @@ AForm*	Intern::_RRForm(std::string target) const
 	AForm*	form = new RobotomyRequestForm(target);
 	return form;
 }
-	
-
