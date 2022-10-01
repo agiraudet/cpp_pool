@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:05:42 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 13:48:28 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:54:01 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CAT_HPP
 
 # include <iostream>
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
 class	Cat : public AAnimal

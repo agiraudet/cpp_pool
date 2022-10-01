@@ -6,11 +6,11 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:18:19 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 13:52:00 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:52:46 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 

@@ -6,7 +6,7 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/09/21 13:31:58 by agiraude         ###   ########.fr        #
+#    Updated: 2022/10/01 19:56:24 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ BUILD_DIR	:=	./build
 SRCS_DIR	:=	./srcs
 
 SRCS		:=	main.cpp \
-				Animal.cpp \
+				AAnimal.cpp \
 				Brain.cpp \
 				Cat.cpp \
 				Dog.cpp

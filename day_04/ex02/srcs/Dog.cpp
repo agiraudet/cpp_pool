@@ -6,13 +6,14 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:40:41 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 13:37:16 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:55:37 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog(void)
+: AAnimal()
 {
 	std::cout << "An Dog has been created" << std::endl;
 	this->setType("Dog");
@@ -20,6 +21,7 @@ Dog::Dog(void)
 }
 
 Dog::Dog(Dog const & src)
+: AAnimal()
 {
 	std::cout << "An Dog has been created by copy" << std::endl;
 	this->_brain = new Brain;

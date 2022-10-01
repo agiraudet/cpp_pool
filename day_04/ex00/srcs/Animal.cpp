@@ -6,13 +6,14 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:40:41 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 09:29:09 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:39:37 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal(void)
+: _type("none")
 {
 	std::cout << "An animal has been created" << std::endl;
 }

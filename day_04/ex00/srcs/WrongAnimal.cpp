@@ -6,13 +6,14 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:40:41 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 09:36:37 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:39:59 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void)
+: _type("none")
 {
 	std::cout << "An WrongAnimal has been created" << std::endl;
 }

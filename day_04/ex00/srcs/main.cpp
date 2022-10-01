@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 09:18:19 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 13:57:57 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:38:36 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int main()
 	std::cout << std::endl;
 	std::cout << "# With WrongCat/WrongAnimal (no virtual keywords)" << std::endl;
 	{
-		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* i = new WrongCat();
+		const WrongAnimal* meta = new WrongCat();
+		const WrongCat* i = new WrongCat();
 
 		std::cout << i->getType() << " " << std::endl;
 		i->makeSound(); //will output the wrong cat sound!

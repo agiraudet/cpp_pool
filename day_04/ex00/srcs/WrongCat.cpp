@@ -6,19 +6,21 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:40:41 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/21 09:37:11 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:36:47 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat(void)
+: WrongAnimal()
 {
 	std::cout << "An WrongCat has been created" << std::endl;
 	this->_type = "WrongCat";
 }
 
 WrongCat::WrongCat(WrongCat const & src)
+: WrongAnimal()
 {
 	*this =src;
 	std::cout << "An WrongCat has been created by copy" << std::endl;
