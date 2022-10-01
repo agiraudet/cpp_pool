@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:17:45 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 15:33:35 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:05:02 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ class	Bureaucrat
 
 	private:
 		
-		std::string		_name;
-		unsigned int	_grade;
+		std::string const	_name;
+		unsigned int		_grade;
 
 };
 

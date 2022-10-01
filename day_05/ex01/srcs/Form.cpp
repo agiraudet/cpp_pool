@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:14 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 15:11:49 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:26:51 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Form::Form(std::string name, unsigned int gToSign, unsigned int gToExecute)
 }
 
 Form::Form(Form const & src)
-: _gradeToSign(src.getGradeToSign()), _gradeToExecute(src.getGradeToExecute())
+: _name(src._name), _gradeToSign(src.getGradeToSign()), _gradeToExecute(src.getGradeToExecute())
 {
 	*this = src;
 	std::cout << "Form " << this->_name << " has been created by copy" << std::endl;
@@ -41,7 +41,6 @@ Form::~Form(void)
 
 Form & Form::operator=(Form const & rhs)
 {
-	this->_name = rhs.getName();
 	this->_signed = rhs.getSigned();
 	return *this;
 }

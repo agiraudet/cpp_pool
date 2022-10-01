@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:47:25 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 15:17:06 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:24:25 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ class	Form
 
 	private:
 		
-		std::string			_name;
+		std::string const	_name;
 		bool				_signed;
 		unsigned int const	_gradeToSign;
 		unsigned int const	_gradeToExecute;

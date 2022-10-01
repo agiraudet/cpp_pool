@@ -6,7 +6,7 @@
 /*   By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 13:25:32 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 15:53:53 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:35:00 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ AForm*	Intern::makeForm(std::string name, std::string target) const
 		if (name.find(options[i]) != std::string::npos)
 		{
 			newForm = (this->*_f[i])(target);
-			newForm->setName(name);
 			std::cout << "Intern create " << *newForm << std::endl;
 			return newForm;
 		}

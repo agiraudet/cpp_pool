@@ -6,7 +6,7 @@
 #    By: agiraude <agiraude@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 15:43:27 by agiraude          #+#    #+#              #
-#    Updated: 2022/10/01 19:56:24 by agiraude         ###   ########.fr        #
+#    Updated: 2022/10/01 20:39:04 by agiraude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ CFLAGS		:=	$(INC_FLAGS) -Wall -Wextra -Werror -std=c++98 -g
 
 CC			:=	c++
 
-$(NAME): $(OBJS) $(LIBFT)
+$(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(DEPS) -o $@
 
 $(BUILD_DIR):

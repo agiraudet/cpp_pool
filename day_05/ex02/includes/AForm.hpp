@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:47:25 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 15:32:31 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:32:22 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class	AForm
 
 		virtual void	act(void) const = 0;
 
-		void			setName(std::string name);
 		std::string		getName(void) const;
 		unsigned int	getGradeToSign(void) const;
 		unsigned int	getGradeToExecute(void) const;
@@ -67,7 +66,7 @@ class	AForm
 
 	private:
 		
-		std::string			_name;
+		std::string const	_name;
 		bool				_signed;
 		unsigned int const	_gradeToSign;
 		unsigned int const	_gradeToExecute;

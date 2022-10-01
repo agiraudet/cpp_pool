@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:14 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 15:36:32 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:32:14 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ AForm::AForm(std::string name, unsigned int gToSign, unsigned int gToExecute)
 }
 
 AForm::AForm(AForm const & src)
-: _gradeToSign(src.getGradeToSign()), _gradeToExecute(src.getGradeToExecute())
+: _name(src._name), _gradeToSign(src.getGradeToSign()), _gradeToExecute(src.getGradeToExecute())
 {
 	*this = src;
 }
@@ -32,7 +32,6 @@ AForm::~AForm(void)
 
 AForm & AForm::operator=(AForm const & rhs)
 {
-	this->_name = rhs.getName();
 	this->_signed = rhs.getSigned();
 	return *this;
 }
@@ -56,11 +55,6 @@ void	AForm::_checkGrade(unsigned int grade) const
 std::string	AForm::getName(void) const
 {
 	return this->_name;
-}
-
-void	AForm::setName(std::string name)
-{
-	this->_name = name;
 }
 
 unsigned int	AForm::getGradeToSign(void) const

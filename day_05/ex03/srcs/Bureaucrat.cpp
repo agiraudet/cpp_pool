@@ -6,7 +6,7 @@
 /*   By: agiraude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:19:43 by agiraude          #+#    #+#             */
-/*   Updated: 2022/09/27 16:03:58 by agiraude         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:06:18 by agiraude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Bureaucrat::Bureaucrat(std::string name, unsigned int grade)
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & src)
+: _name(src._name)
 {
 	*this = src;
 }
@@ -39,7 +40,6 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const & rhs)
 {
-	this->_name = rhs.getName();
 	this->_grade = rhs.getGrade();
 	return *this;
 }
